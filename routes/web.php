@@ -16,9 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index');
+
 Route::get('/products', 'ProductController@index');
 Route::get('/create', 'ProductController@create');
 Route::get('/edit/{id}', 'ProductController@edit');

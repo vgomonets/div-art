@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Авторизація</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{{ route('login') }}" id="login-form">
+                    <form class="form-horizontal" method="POST" action="{{ route('login') }}" id="login-form">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
